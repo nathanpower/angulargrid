@@ -6,10 +6,10 @@
         "name": "Sudhanshu Yadav",
         "email": "sudhanshuyadav2@gmail.com"
     },
-    "version": "0.3.5",
+    "version": "0.3.6",
     "repository": {
         "type": "git",
-        "url": "https://github.com/nathanpower/angulargrid"
+        "url": "https://github.com/s-yadav/angulargrid"
     },
     "licenses": [
         {
