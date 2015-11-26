@@ -294,7 +294,7 @@
                         });
                     }
                     
-                    scope.$watch(modalKey, watch, true);
+                    scope.$watchCollection(modalKey, watch);
 
                     //listen window resize event and reflow grids after a timeout
                     var lastDomWidth = domElm.offsetWidth;
