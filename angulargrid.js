@@ -254,33 +254,13 @@
                         });
 
                     }
-
-                    //function to check for ng animation
-                    function ngCheckAnim() {
-                        var leavingElm = domToAry(listElms).filter(function (elm) {
-                            return single(elm).hasClass('ng-leave');
-                        });
-                        return $q(function (resolve) {
-                            if (!leavingElm.length) {
-                                resolve();
-                            } else {
-                                single(leavingElm[0]).one('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', function () {
-                                    $timeout(function () {
-                                        listElms = element.children();
-                                        resolve();
-                                    });
-                                });
-                            }
-                        });
-                    }
-
+                    
                     //watch on modal key
                     
                     function watch(){
                          $timeout(function () {
                             listElms = element.children();
 
-                            ngCheckAnim().then(function () {
                                 //handle images
                                 handleImage();
 
@@ -291,7 +271,6 @@
 
                                 });
                             });
-                        });
                     }
                     
                     scope.$watchCollection(modalKey, watch);
